@@ -1,16 +1,24 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Greeter from "@/components/Greeter";
+import Clock from "@/components/Clock";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Greeter />
+      <Greeter greeting='Hey' name='john'/>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
         </p>
+        <div>
+          <Clock continent='Africa' city='Nairobi' /> <hr />
+          <Clock continent='Europe' city='London' /> <hr />
+          <Clock continent='Australia' city='Sydney' /> <hr />
+          <Clock continent='America' city='New_York' /> <hr />
+          <Clock continent='Asia' city='Tokyo' /> <hr />
+        </div>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
